@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kamelott.github.io/education/docs/Base/terminals/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kamelott.github.io/education/docs/Base/vagrant/</loc>
          <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
