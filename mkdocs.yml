@@ -1,0 +1,42 @@
+site_name: Education - Infrastructure1
+site_url: https://kamelott.github.io/education/
+docs_dir: '.'
+theme: 
+  name: material
+  features:
+    - navigation.instant
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.select
+    - content.code.copy
+repo_name: "Education"
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      check_paths: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+plugins:
+  - search
+  - same-dir
+  - include_dir_to_nav:
+      recurse: false
+  - exclude:
+      glob:
+        - "*.tf*"
+        - "*.swap"
+        - "*.json"
+        - "*.yml"
+        - "*.yaml"
+        - "*.tpl"
+      regex:
+        - '.*\.(tf|swap|json|yml|yaml|tpl).*.$'
+nav:
+    - docs
+
