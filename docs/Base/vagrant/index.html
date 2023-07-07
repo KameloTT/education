@@ -251,9 +251,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Vagrant - Base Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Vagrant - Base Installation
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-machine-conceptvm" class="md-nav__link">
+    Virtual Machine concept(VM)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hypervisor-concept" class="md-nav__link">
+    Hypervisor concept
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    Useful Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -286,6 +331,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-machine-conceptvm" class="md-nav__link">
+    Virtual Machine concept(VM)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hypervisor-concept" class="md-nav__link">
+    Hypervisor concept
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-links" class="md-nav__link">
+    Useful Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -301,6 +375,55 @@
 
 <h1 id="vagrant-base-installation">Vagrant - Base Installation</h1>
 <p>This page is described how to install, configure and use vagrant tool</p>
+<p>Vagrant is a tool which help to install (VM)Virtual Machine(it is isolated operation system(linux or windows) in your laptop or server or public clouds. </p>
+<h2 id="virtual-machine-conceptvm">Virtual Machine concept(VM)</h2>
+<p>During Virtual machine creating we have to specify how much resources will be allocated from server(or your laptop) to such VM.</p>
+<p>Below is main resources which we define for vitrual machine</p>
+<ul>
+<li>CPU (processor cores)</li>
+<li>RAM (Memory, not a disk)</li>
+<li>DISK (disk space which will be consumed from server(or your laptop).</li>
+<li>Type of Operation system(Linux or Windows)</li>
+<li>Name (any human readable name)</li>
+</ul>
+<p>VM lives on you laptop and consume your resources like any other program. Turn it off when you finish work with them or delete it to free disk capacity.</p>
+<p><img alt="vm" src="https://www.softwarehow.com/wp-content/uploads/Virtual-Machine-2.jpg" title="vm" /></p>
+<p>For creation any of VMs need to use special software(program) which can control VMs and manage. </p>
+<p>Such type of software has name <strong>Hypervisor</strong></p>
+<h2 id="hypervisor-concept">Hypervisor concept</h2>
+<p>Hypervior is software which can manage VM lifecycle(create, modify, delete).</p>
+<p>There is a list most popular Hypervisors which can be installed on laptop or server</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Linux support</th>
+<th>Windows support</th>
+<th>Production</th>
+<th>Testing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VitrualBox</td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Virtualbox (not for servers or production environment, only for some tests  on laptop)</li>
+<li>Parallels (not for servers or production environment, only for some tests  on laptop)</li>
+<li>RHEV or RedHat Enterprise Virtualization (Can be used for servers and laptops)</li>
+<li>KVM (Can be used for servers and laptops)</li>
+<li>Hyper-V</li>
+</ul>
+<h2 id="useful-links">Useful Links</h2>
+<ul>
+<li>[Russian article - Vagrant]</li>
+</ul>
 
 
 
