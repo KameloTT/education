@@ -382,6 +382,44 @@
 <h1 id="lab-for-vm-management-in-parallels">Lab for VM management in Parallels</h1>
 <p>Step 1. Open a Parallels on Mac</p>
 <p><img src="../img/par-1.png" /></p>
+<p>Step 1a. (optional) Cancel update offer</p>
+<p>Step 1b. (optional) Close Windows7 window if it appeared and keep only <strong>Control Center</strong> window</p>
+<p><img src="../img/par-2.png" /></p>
+<p>There is one VM is exist on our laptop, lets shut it down</p>
+<p>Step 1c.(optional) Shut down existing VM with Windows 7.</p>
+<p><img src="../img/par-3.png" /></p>
+<p>Step 2. Create New VM</p>
+<p>Click on "plus" icon to run Creation Wizard(Installation Assistant)</p>
+<p><img src="../img/par-4.png" /></p>
+<p>Step 3. Choose installation from DVD or image file</p>
+<p><img src="../img/par-5.png" /></p>
+<p>Step 4. Installation Assistant tries to find any images (.iso files) on Laptop for your choosing</p>
+<p>Step 5. Choose first one with name <strong>CentOS-7-x86_64-DVD-1810.iso</strong></p>
+<p><img src="../img/par-6.png" /></p>
+<p>Step 6. Define new user for new Linux VM</p>
+<p>It will be user which can login to our VM and do some actions</p>
+<div class="highlight"><pre><span></span><code>User Name: user1
+Password: password1
+Verify Password: password1
+</code></pre></div>
+<p><img src="../img/par-7.png" /></p>
+<p>Step 7. Specify name of new VM and location of file with VM</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Virtual Machine is a file actually and we can move it from one laptop/server ot another</p>
+</details>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>Each Hypervisor has own format of VM files and almost all of them are incompatible. That means we cannot create VM in Parallels, copy such file to other server and run it in KVM Hypervisor for example.</p>
+</details>
+<p>Dont forget to select Customize settings before installation to adjust CPU and RAM(memory) for new VM</p>
+<p><img src="../img/par-8.png" /></p>
+<p>Step 8. Configure VM settings(resources which will be allocated from your laptop/server to the VM)</p>
+<p><img src="../img/par-9.png" /></p>
+<p>Step 9. Allocate 1 CPU and and 1024 MB RAM and close such window</p>
+<p><img src="../img/par-10.png" /></p>
+<p>Step 10. Run Installation</p>
+<p><img src="../img/par-11.png" /></p>
 
 
 
