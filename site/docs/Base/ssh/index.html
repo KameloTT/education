@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://kamelott.github.io/education/docs/Base/vagrant/">
+        <link rel="canonical" href="https://kamelott.github.io/education/docs/Base/ssh/">
       
       
-        <link rel="prev" href="../terminals/">
+        <link rel="prev" href="../../plan/">
       
       
-        <link rel="next" href="../../Labs/editors/">
+        <link rel="next" href="../terminals/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Virtualization concept - Education - Infrastructure1</title>
+        <title>SSH - Remote access - Education - Infrastructure1</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#virtualization-concept" class="md-skip">
+        <a href="#ssh-remote-access" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Virtualization concept
+              SSH - Remote access
             
           </span>
         </div>
@@ -243,11 +243,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../ssh/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SSH - Remote access
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         SSH - Remote access
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#access-with-loginpassword" class="md-nav__link">
+    Access with login/password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passwordless-access" class="md-nav__link">
+    Passwordless access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-remote-command-via-ssh-on-remote-host" class="md-nav__link">
+    Execute remote command via ssh on remote host
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -271,79 +326,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Virtualization concept
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../vagrant/" class="md-nav__link">
         Virtualization concept
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#virtual-machine-conceptvm" class="md-nav__link">
-    Virtual Machine concept(VM)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hypervisor-concept" class="md-nav__link">
-    Hypervisor concept
-  </a>
-  
-    <nav class="md-nav" aria-label="Hypervisor concept">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parallels" class="md-nav__link">
-    Parallels
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-links" class="md-nav__link">
-    Useful Links
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -447,35 +434,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#virtual-machine-conceptvm" class="md-nav__link">
-    Virtual Machine concept(VM)
+  <a href="#access-with-loginpassword" class="md-nav__link">
+    Access with login/password
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hypervisor-concept" class="md-nav__link">
-    Hypervisor concept
+  <a href="#passwordless-access" class="md-nav__link">
+    Passwordless access
   </a>
-  
-    <nav class="md-nav" aria-label="Hypervisor concept">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parallels" class="md-nav__link">
-    Parallels
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#useful-links" class="md-nav__link">
-    Useful Links
+  <a href="#execute-remote-command-via-ssh-on-remote-host" class="md-nav__link">
+    Execute remote command via ssh on remote host
   </a>
   
 </li>
@@ -495,102 +469,60 @@
                   
 
 
-<h1 id="virtualization-concept">Virtualization concept</h1>
-<p>This page is described how to install, configure and use vagrant tool</p>
-<p>Vagrant is a tool which help to install (VM)Virtual Machine(it is isolated operation system(linux or windows) in your laptop or server or public clouds. </p>
-<h2 id="virtual-machine-conceptvm">Virtual Machine concept(VM)</h2>
-<p>During Virtual machine creating we have to specify how much resources will be allocated from server(or your laptop) to such VM.</p>
-<p>Below is main resources which we define for vitrual machine</p>
+<h1 id="ssh-remote-access">SSH - Remote access</h1>
+<p>ssh is a tool which allows to connect to remote laptop/server.</p>
+<p>Usually all laptops/servers on linux/MacOs have such tool.</p>
+<h2 id="access-with-loginpassword">Access with login/password</h2>
+<p>Below is syntax of using</p>
+<div class="highlight"><pre><span></span><code>ssh &lt;user&gt;@&lt;server_name or ip&gt;
+</code></pre></div>
+<p>Example:</p>
+<p>if we want to connect to server with ip <strong>10.211.55.9</strong> with user <strong>user1</strong></p>
+<div class="highlight"><pre><span></span><code>ssh user1@10.211.55.9
+</code></pre></div>
+<p>Terminal asks password for user1 to allow access to 10.211.55.9</p>
+<p>Once you enter correct password for user1 you will be able to login to 10.211.55.9 server.</p>
+<h2 id="passwordless-access">Passwordless access</h2>
+<p>In automation world, scripts sometimes are required to connect to remote servers for running some commands and it is unacceptable to enter password manually each time when your script tries to connect to remote server.</p>
+<p>For such scenario where we need to get access to remote server without password we need to create special ssh key which we can use as atrust proof for remote server.</p>
+<p>Step 1. Create new ssh key.</p>
+<p>We use toolwith name ssh-keygen which generates two keys.</p>
 <ul>
-<li>CPU (processor cores)</li>
-<li>RAM (Memory, not a disk)</li>
-<li>DISK (disk space which will be consumed from server(or your laptop).</li>
-<li>Type of Operation system(Linux or Windows)</li>
-<li>Name (any human readable name)</li>
+<li>Public key - we copy such key to remote server</li>
+<li>Private key - out personal key which we will use to remote connect to server with preinstalled our public key</li>
 </ul>
-<p>VM lives on you laptop and consume your resources like any other program. Turn it off when you finish work with them or delete it to free disk capacity.</p>
-<p><img alt="vm" src="https://www.softwarehow.com/wp-content/uploads/Virtual-Machine-2.jpg" title="vm" /></p>
-<p>For creation any of VMs need to use special software(program) which can control VMs and manage. </p>
-<p>Such type of software has name <strong>Hypervisor</strong></p>
-<h2 id="hypervisor-concept">Hypervisor concept</h2>
-<p>Hypervior is software which can manage VM lifecycle(create, modify, delete).</p>
-<p>There is a list most popular Hypervisors which can be installed on laptop or server</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Install on Linux</th>
-<th>Install on Windows</th>
-<th>Production</th>
-<th>Testing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>VirtualBox</td>
-<td>yes</td>
-<td>yes</td>
-<td>no</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Parallels</td>
-<td>yes</td>
-<td>no</td>
-<td>no</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>RHEV</td>
-<td>yes</td>
-<td>no</td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>KVM</td>
-<td>yes</td>
-<td>no</td>
-<td>yes*</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Hyper-V</td>
-<td>no</td>
-<td>yes</td>
-<td>yes</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Vmware</td>
-<td>yes</td>
-<td>no</td>
-<td>yes</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<p>Below is diagram which shows Hypervisor role:</p>
-<p><img alt="hyp" src="https://i0.wp.com/i.postimg.cc/pL0drWxX/Hypervisor-Type-II-1024x432.png?resize=583%2C246&amp;ssl=1" title="hyp" /></p>
-<p>Where:</p>
-<ul>
-<li>Hardware is server or laptop with process,memory and disk(physical device)</li>
-<li>OS is Operation system on server/laptop like Linux/Windows/Macos</li>
-<li>Hypervisor is software on our Operation system</li>
-<li>Guest OS is Operation system on Virtual machine which is controlled by Hypervisor on our server/laptop</li>
-</ul>
-<h3 id="parallels">Parallels</h3>
-<p>Parallels is Hypervisor for MacOS which can be used for VM creation and management.</p>
-<p>This is icon of such software on your laptop</p>
-<p><img src="https://www.wizcase.com/wp-content/uploads/2021/12/en-parallels-logo.jpg" alt="parallels" width="150" height="150"/> </p>
-<details class="warning" open="open">
-<summary>Warning</summary>
-<p>Do not update such preinstalled Parallels on your laptop, it will be broken, 100%.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Public key is always assosiate only with one single private key. Pair public/private keys  is uniq. We can create many public/private keys but specific public key always belong to their private key which is generated at the same time.</p>
 </details>
-<h2 id="useful-links">Useful Links</h2>
+<div class="highlight"><pre><span></span><code>ssh-keygen
+</code></pre></div>
+<p>Press Enter on all questions. it will create private/public key pair in default place</p>
+<p><img src="../img/ssh-1.png" /></p>
+<p>Step 2. Locate your keys</p>
+<div class="highlight"><pre><span></span><code>ls -l ~/.ssh/
+</code></pre></div>
 <ul>
-<li>[Russian article - Vagrant]</li>
+<li>id_rsa - is private ssh key</li>
+<li>id_rsa.pub - is public ssh key</li>
 </ul>
+<p>Step 3. Use ssh keys for passwordless remote connection</p>
+<p>For using such key we need to add our public ssh key to remote host</p>
+<p><div class="highlight"><pre><span></span><code>ssh-copy-id -i ~/.ssh/id_rsa.pub user1@10.211.55.9
+</code></pre></div>
+Enter password</p>
+<p><img src="../img/ssh-2.png" /></p>
+<p>Login to remote host with using our own ssh private key</p>
+<p>ssh -i ~/.ssh/id_rsa user1@10.211.55.9</p>
+<h2 id="execute-remote-command-via-ssh-on-remote-host">Execute remote command via ssh on remote host</h2>
+<p>ssh tool allows us to run command on remote host as well as just login to one</p>
+<div class="highlight"><pre><span></span><code>Syntax: ssh -i &lt;private_key&gt; &lt;user&gt;@&lt;host&gt; &lt;command&gt;
+</code></pre></div>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>ssh -i ~/.ssh/id_rsa user1@10.211.55.9 date
+</code></pre></div>
+<p>Such command run command <strong>date</strong> which shows time and date on remote server.</p>
+<p><img src="../img/ssh-3.png" /></p>
 
 
 
