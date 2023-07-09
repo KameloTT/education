@@ -474,7 +474,8 @@
 <p>Usually all laptops/servers on linux/MacOs have such tool.</p>
 <h2 id="access-with-loginpassword">Access with login/password</h2>
 <p>Below is syntax of using</p>
-<p>ssh <user>@<server_name or ip></p>
+<div class="highlight"><pre><span></span><code>ssh &lt;user&gt;@&lt;server_name or ip&gt;
+</code></pre></div>
 <p>Example:</p>
 <p>if we want to connect to server with ip <strong>10.211.55.9</strong> with user <strong>user1</strong></p>
 <div class="highlight"><pre><span></span><code>ssh user1@10.211.55.99
@@ -515,7 +516,8 @@ Enter password</p>
 <p>ssh -i ~/.ssh/id_rsa user1@10.211.55.9</p>
 <h2 id="execute-remote-command-via-ssh-on-remote-host">Execute remote command via ssh on remote host</h2>
 <p>ssh tool allows us to run command on remote host as well as just login to one</p>
-<p>Syntax: ssh -i <private_key> <user>@<host> <command></p>
+<div class="highlight"><pre><span></span><code>Syntax: ssh -i &lt;private_key&gt; &lt;user&gt;@&lt;host&gt; &lt;command&gt;
+</code></pre></div>
 <p>Example:</p>
 <div class="highlight"><pre><span></span><code>ssh -i ~/.ssh/id_rsa user1@10.211.55.9 date
 </code></pre></div>
