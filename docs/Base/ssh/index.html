@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://kamelott.github.io/education/docs/Labs/editors/">
+        <link rel="canonical" href="https://kamelott.github.io/education/docs/Base/ssh/">
       
       
-        <link rel="prev" href="../../Base/vagrant/">
+        <link rel="prev" href="../../plan/">
       
       
-        <link rel="next" href="../parallels/">
+        <link rel="next" href="../terminals/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Lab for practice with vi editor - Education - Infrastructure1</title>
+        <title>SSH - Remote access - Education - Infrastructure1</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-for-practice-with-vi-editor" class="md-skip">
+        <a href="#ssh-remote-access" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab for practice with vi editor
+              SSH - Remote access
             
           </span>
         </div>
@@ -214,16 +214,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -232,7 +232,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Base
@@ -243,11 +243,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Base/ssh/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SSH - Remote access
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         SSH - Remote access
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#access-with-loginpassword" class="md-nav__link">
+    Access with login/password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passwordless-access" class="md-nav__link">
+    Passwordless access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-remote-command-via-ssh-on-remote-host" class="md-nav__link">
+    Execute remote command via ssh on remote host
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -259,7 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Base/terminals/" class="md-nav__link">
+      <a href="../terminals/" class="md-nav__link">
         Terminals and Editors
       </a>
     </li>
@@ -273,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Base/vagrant/" class="md-nav__link">
+      <a href="../vagrant/" class="md-nav__link">
         Virtualization concept
       </a>
     </li>
@@ -293,16 +348,16 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
       
       
       
@@ -311,7 +366,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Labs
@@ -322,21 +377,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Labs/editors/" class="md-nav__link">
         Lab for practice with vi editor
       </a>
-      
     </li>
   
 
@@ -348,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parallels/" class="md-nav__link">
+      <a href="../../Labs/parallels/" class="md-nav__link">
         Lab for VM management in Parallels
       </a>
     </li>
@@ -382,6 +427,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#access-with-loginpassword" class="md-nav__link">
+    Access with login/password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passwordless-access" class="md-nav__link">
+    Passwordless access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execute-remote-command-via-ssh-on-remote-host" class="md-nav__link">
+    Execute remote command via ssh on remote host
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -395,48 +469,57 @@
                   
 
 
-<h1 id="lab-for-practice-with-vi-editor">Lab for practice with vi editor</h1>
-<p>Step 1. Create a new file</p>
-<p>In a Linux/Macos there are several ways how to create a new file</p>
+<h1 id="ssh-remote-access">SSH - Remote access</h1>
+<p>ssh is a tool which allows to connect to remote laptop/server.</p>
+<p>Usually all laptops/servers on linux/MacOs have such tool.</p>
+<h2 id="access-with-loginpassword">Access with login/password</h2>
+<p>Below is syntax of using</p>
+<p>ssh <user>@<server_name or ip></p>
+<p>Example:</p>
+<p>if we want to connect to server with ip <strong>10.211.55.9</strong> with user <strong>user1</strong></p>
+<div class="highlight"><pre><span></span><code>ssh user1@10.211.55.99
+</code></pre></div>
+<p>Terminal asks password for user1 to allow access to 10.211.55.99</p>
+<p>Only you enter correct password for user1 you will be able to login to 10.211.55.99 server.</p>
+<h2 id="passwordless-access">Passwordless access</h2>
+<p>In automation world, scripts sometimes are required to connect to remote servers for running some commands and it is unacceptable to enter password manually each time when your script tries to connect to remote server.</p>
+<p>For such scenario where we need to get access to remote server without password we need to create special ssh key which we can use as atrust proof for remote server.</p>
+<p>Step 1. Create new ssh key.</p>
+<p>We use toolwith name ssh-keygen which generates two keys.</p>
 <ul>
-<li>touch newfile.txt</li>
-<li>vi newfile.txt</li>
+<li>Public key - we copy such key to remote server</li>
+<li>Private key - out personal key which we will use to remote connect to server with preinstalled our public key</li>
 </ul>
-<p>First command just creates ea new file</p>
-<p>Second command creates a new file and opens editor vi</p>
-<p>Step 2. Populate new file with following context</p>
-<div class="highlight"><pre><span></span><code>Hi, I&#39;m working on Macos in VI editor
-</code></pre></div>
 <details class="note" open="open">
 <summary>Note</summary>
-<p>for start typing you need to activate INSERT mode, ESC+i</p>
+<p>Public key is always assosiate only with one single private key. Pair public/private keys  is uniq. We can create many public/private keys but specific public key always belong to their private key which is generated at the same time.</p>
 </details>
-<p>Step 3. Save such file and close at the same time</p>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>use following combination ESC + :wq ENTER</p>
-</details>
-<p>Step 4. Read your file</p>
-<div class="highlight"><pre><span></span><code>cat newfile.txt
+<div class="highlight"><pre><span></span><code>ssh-keygen
 </code></pre></div>
-<details class="note" open="open">
-<summary>Note</summary>
-<p><strong>cat</strong> is Linux/Macos command to read files</p>
-</details>
-<p>Step 5. Open you file and modify content</p>
-<div class="highlight"><pre><span></span><code>vi newfile.txt
+<p>Press Enter on all questions. it will create private/public key pair in default place</p>
+<p><img src="../img/ssh-1.png" /></p>
+<p>Step 2. Locate your keys</p>
+<div class="highlight"><pre><span></span><code>ls -l ~/.ssh/
 </code></pre></div>
-<p>Change content to:</p>
-<div class="highlight"><pre><span></span><code>Hi, I&#39;m working second time on Macos in VI editor.
+<ul>
+<li>id_rsa - is private ssh key</li>
+<li>id_rsa.pub - is public ssh key</li>
+</ul>
+<p>Step 3. Use ssh keys for passwordless remote connection</p>
+<p>For using such key we need to add our public ssh key to remote host</p>
+<p><div class="highlight"><pre><span></span><code>ssh-copy-id -i ~/.ssh/id_rsa.pub user1@10.211.55.9
 </code></pre></div>
-<p>Step 6. Delete such file</p>
-<div class="highlight"><pre><span></span><code>rm newfile.txt
+Enter password</p>
+<p><img src="../img/ssh-2.png" /></p>
+<p>Login to remote host with using our own ssh private key</p>
+<p>ssh -i ~/.ssh/id_rsa user1@10.211.55.9</p>
+<h2 id="execute-remote-command-via-ssh-on-remote-host">Execute remote command via ssh on remote host</h2>
+<p>ssh tool allows us to run command on remote host as well as just login to one</p>
+<p>Syntax: ssh -i <private_key> <user>@<host> <command></p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>ssh -i ~/.ssh/id_rsa user1@10.211.55.9 date
 </code></pre></div>
-<details class="note" open="open">
-<summary>Note</summary>
-<p><strong>rm</strong> is Linux/Macos command for delete files or directories.
-  In some cases it asks to confirm deletion operation in terminal</p>
-</details>
+<p>Such command run command <strong>date</strong> which shows time and date on remote server.</p>
 
 
 
