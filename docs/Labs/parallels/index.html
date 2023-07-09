@@ -430,22 +430,69 @@ Verify Password: password1
 <p>Step 10. Start VM initialization</p>
 <p><img src="../img/par-11.png" /></p>
 <p>Step 11. Run Linux installation</p>
-<p>On the appearing screen choose  by arrows buttons first option <strong>Install CentOS 7</strong> and press ENTER</p>
+<p>On the appearing screen choose  by arrows buttons first option <strong>Install CentOS Stream 9</strong> and press ENTER</p>
 <p><img src="../img/par-12.png" /></p>
 <details class="note" open="open">
 <summary>Note</summary>
 <p>Once you click on installation screen your cursor will be locked, to release it press CONTROL+OPTIONS on a keyboard</p>
 </details>
-<p>Step 12. Wait about 10-15 minutes until Linux is installed</p>
-<p>During this process installer installs packages and configures various parameters for Linux Operation system like Language, user(which we specify above), network settings.</p>
+<p>Step 12. Set Linux settings before installation</p>
+<p>During this process we can choose which packages can be installed and configures various parameters for Linux Operation system like Language, user(which we specify above), network settings.</p>
 <details class="note" open="open">
 <summary>Note</summary>
 <p>Once installed you can find your VM file here <strong>/Users/<your user>/Parallels</strong>.</p>
 <p>*.pvm is Parallels file extensing which means that it is VM is created by Parallels Hypervisor.</p>
 </details>
+<p>Step 12.1 Select language <strong>English</strong></p>
 <p><img src="../img/par-13.png" /></p>
+<p>Step 12.2 Select Software packages for installation</p>
+<p>Click on <strong>Software Selection</strong> and Choose <strong>Minimal Install</strong> and <strong>Done</strong></p>
 <p><img src="../img/par-14.png" /></p>
+<p>Step 12.3 Confirm disk for Linux installation</p>
+<p>Click on <strong>Installation Destination</strong> and <strong>Done</strong></p>
+<p><img src="../img/par-15.png" /></p>
+<p>By default single disk is choosen and you don't need to select something. Just press Done.</p>
+<p>Step</p>
+<p>Step 12.4 Setup root(it is administrator) user</p>
+<p>Click on <strong>Root Password</strong> option and specify password for <strong>root</strong> user.</p>
+<p>Select  <strong>Allow root SSH login with password</strong> option</p>
+<p><div class="highlight"><pre><span></span><code>Root password: password1
+Confirm: password1
+</code></pre></div>
+<img src="../img/par-16.png" /></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Need to Press <strong>Done</strong> twice to confirm password for root user</p>
+</details>
+<p>Step 12.5 Add user</p>
+<p>Click on <strong>User Creation</strong> and fill out the form</p>
+<div class="highlight"><pre><span></span><code>Full name: user1
+User name: user1
+Make this user administrator: yes
+Require apassword to use this account: yes
+Password: password1
+Confirm password: password1
+</code></pre></div>
+<p><img src="../img/par-17.png" /></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Need to Press <strong>Done</strong> twice to confirm password for root user</p>
+</details>
+<p>Step 13. Start Linux installation</p>
+<p>Click on <strong>Begin instalation</strong></p>
+<p><img src="../img/par-18.png" /></p>
+<p>Wait until button <strong>Reboot System</strong> become active and Press it.</p>
+<p><img src="../img/par-19.png" /></p>
 <p>After that installation, VM will reboot and you will see *<em>terminal with login page</em></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Once installed you can find your VM file here <strong>/Users/<your user>/Parallels</strong>.</p>
+<p>*.pvm is Parallels file extensing which means that it is VM is created by Parallels Hypervisor.</p>
+</details>
+<p>Step 14. Login as user <strong>user1</strong></p>
+<p>Use password from steps above</p>
+<p><img src="../img/par-20.png" /></p>
+<p><img src="../img/par-21.png" /></p>
 
 
 
