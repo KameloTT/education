@@ -394,8 +394,17 @@
 <p>Step 3. Choose installation from DVD or image file</p>
 <p><img src="../img/par-5.png" /></p>
 <p>Step 4. Installation Assistant tries to find any images (.iso files) on Laptop for your choosing</p>
-<p>Step 5. Choose first one with name <strong>CentOS-7-x86_64-DVD-1810.iso</strong></p>
+<p>Step 5. Choose first one with name <strong>CentOS-Stream-9-latest-x86_64-dvd1.iso</strong></p>
 <p><img src="../img/par-6.png" /></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>There many different Linux distributives like:
+ - CentOS (freeware version of RHEL)
+ - RHEL(Red Hat Enterprise Linux)
+ - Debian
+ - Ubuntu
+ - etc</p>
+</details>
 <p>Step 6. Define new user for new Linux VM</p>
 <p>It will be user which can login to our VM and do some actions</p>
 <div class="highlight"><pre><span></span><code>User Name: user1
@@ -418,8 +427,25 @@ Verify Password: password1
 <p><img src="../img/par-9.png" /></p>
 <p>Step 9. Allocate 1 CPU and and 1024 MB RAM and close such window</p>
 <p><img src="../img/par-10.png" /></p>
-<p>Step 10. Run Installation</p>
+<p>Step 10. Start VM initialization</p>
 <p><img src="../img/par-11.png" /></p>
+<p>Step 11. Run Linux installation</p>
+<p>On the appearing screen choose  by arrows buttons first option <strong>Install CentOS 7</strong> and press ENTER</p>
+<p><img src="../img/par-12.png" /></p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Once you click on installation screen your cursor will be locked, to release it press CONTROL+OPTIONS on a keyboard</p>
+</details>
+<p>Step 12. Wait about 10-15 minutes until Linux is installed</p>
+<p>During this process installer installs packages and configures various parameters for Linux Operation system like Language, user(which we specify above), network settings.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Once installed you can find your VM file here <strong>/Users/<your user>/Parallels</strong>.</p>
+<p>*.pvm is Parallels file extensing which means that it is VM is created by Parallels Hypervisor.</p>
+</details>
+<p><img src="../img/par-13.png" /></p>
+<p><img src="../img/par-14.png" /></p>
+<p>After that installation, VM will reboot and you will see *<em>terminal with login page</em></p>
 
 
 
