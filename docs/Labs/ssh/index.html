@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="https://kamelott.github.io/education/docs/Labs/parallels/">
+        <link rel="canonical" href="https://kamelott.github.io/education/docs/Labs/ssh/">
       
       
-        <link rel="prev" href="../editors/">
+        <link rel="prev" href="../parallels/">
       
-      
-        <link rel="next" href="../ssh/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Lab for VM management in Parallels - Education - Infrastructure1</title>
+        <title>Lab for using SSH tool - Education - Infrastructure1</title>
       
     
     
@@ -63,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lab-for-vm-management-in-parallels" class="md-skip">
+        <a href="#lab-for-using-ssh-tool" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lab for VM management in Parallels
+              Lab for using SSH tool
             
           </span>
         </div>
@@ -336,6 +334,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../parallels/" class="md-nav__link">
+        Lab for VM management in Parallels
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -348,23 +360,9 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Lab for VM management in Parallels
-      </a>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ssh/" class="md-nav__link">
         Lab for using SSH tool
       </a>
+      
     </li>
   
 
@@ -409,131 +407,36 @@
                   
 
 
-<h1 id="lab-for-vm-management-in-parallels">Lab for VM management in Parallels</h1>
-<p>Step 1. Open a Parallels on Mac</p>
-<p><img src="../img/par-1.png" /></p>
-<p>Step 1a. (optional) Cancel update offer</p>
-<p>Step 1b. (optional) Close Windows7 window if it appeared and keep only <strong>Control Center</strong> window</p>
-<p><img src="../img/par-2.png" /></p>
-<p>There is one VM is exist on our laptop, lets shut it down</p>
-<p>Step 1c.(optional) Shut down existing VM with Windows 7.</p>
-<p><img src="../img/par-3.png" /></p>
-<p>Step 2. Create New VM</p>
-<p>Click on "plus" icon to run Creation Wizard(Installation Assistant)</p>
-<p><img src="../img/par-4.png" /></p>
-<p>Step 3. Choose installation from DVD or image file</p>
-<p><img src="../img/par-5.png" /></p>
-<p>Step 4. Installation Assistant tries to find any images (.iso files) on Laptop for your choosing</p>
-<p>Step 5. Choose first one with name <strong>CentOS-Stream-9-latest-x86_64-dvd1.iso</strong></p>
-<p><img src="../img/par-6.png" /></p>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>There many different Linux distributives like:
- - CentOS (freeware version of RHEL)
- - RHEL(Red Hat Enterprise Linux)
- - Debian
- - Ubuntu
- - etc</p>
-</details>
-<p>Step 6. Define new user for new Linux VM</p>
-<p>It will be user which can login to our VM and do some actions</p>
-<div class="highlight"><pre><span></span><code>User Name: user1
-Password: password1
-Verify Password: password1
+<h1 id="lab-for-using-ssh-tool">Lab for using SSH tool</h1>
+<p>In this lab we will try to remotely connect to own new created VM with linux from out local laptop/server</p>
+<p>Step 1. Create new ssh private/public key pair</p>
+<p><div class="highlight"><pre><span></span><code>Name for key: demo-key
+
+Outcome: check that your current directory contains two files:
 </code></pre></div>
-<p><img src="../img/par-7.png" /></p>
-<p>Step 7. Specify name of new VM and location of file with VM</p>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>Virtual Machine is a file actually and we can move it from one laptop/server ot another</p>
-</details>
-<details class="warning" open="open">
-<summary>Warning</summary>
-<p>Each Hypervisor has own format of VM files and almost all of them are incompatible. That means we cannot create VM in Parallels, copy such file to other server and run it in KVM Hypervisor for example.</p>
-</details>
-<p>Dont forget to select Customize settings before installation to adjust CPU and RAM(memory) for new VM</p>
-<p><img src="../img/par-8.png" /></p>
-<p>Step 8. Configure VM settings(resources which will be allocated from your laptop/server to the VM)</p>
-<p><img src="../img/par-9.png" /></p>
-<p>Step 9. Allocate 1 CPU and and 1024 MB RAM and close such window</p>
-<p><img src="../img/par-10.png" /></p>
-<p>Step 10. Start VM initialization</p>
-<p><img src="../img/par-11.png" /></p>
-<p>Step 11. Run Linux installation</p>
-<p>On the appearing screen choose  by arrows buttons first option <strong>Install CentOS Stream 9</strong> and press ENTER</p>
-<p><img src="../img/par-12.png" /></p>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>Once you click on installation screen your cursor will be locked, to release it press CONTROL+OPTIONS on a keyboard</p>
-</details>
-<p>Step 12. Set Linux settings before installation</p>
-<p>During this process we can choose which packages can be installed and configures various parameters for Linux Operation system like Language, user(which we specify above), network settings.</p>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>Once installed you can find your VM file here <strong>/Users/your user/Parallels</strong>.</p>
-<p>*.pvm is Parallels file extensing which means that it is VM is created by Parallels Hypervisor.</p>
-</details>
-<p>Step 12.1 Select language <strong>English</strong></p>
-<p><img src="../img/par-13.png" /></p>
-<p>Step 12.2 Select Software packages for installation</p>
-<p>Click on <strong>Software Selection</strong> and Choose <strong>Minimal Install</strong> and <strong>Done</strong></p>
-<p><img src="../img/par-14.png" /></p>
-<p>Step 12.3 Confirm disk for Linux installation</p>
-<p>Click on <strong>Installation Destination</strong> and <strong>Done</strong></p>
-<p><img src="../img/par-15.png" /></p>
-<p>By default single disk is choosen and you don't need to select something. Just press Done.</p>
-<p>Step</p>
-<p>Step 12.4 Setup root(it is administrator) user</p>
-<p>Click on <strong>Root Password</strong> option and specify password for <strong>root</strong> user.</p>
-<p>Select  <strong>Allow root SSH login with password</strong> option</p>
-<p><div class="highlight"><pre><span></span><code>Root password: password1
-Confirm: password1
+ls -l </p>
+<p>demo-key
+demo-key.pub
+<div class="highlight"><pre><span></span><code>Step 2. Add our public key to remote VM
+
+For remote VM we will use VM from [Lab for VM management in Parallels](https://kamelott.github.io/education/docs/Labs/parallels/)
+
+For key, file from Step 1 of **this Lab**
 </code></pre></div>
-<img src="../img/par-16.png" /></p>
+ssh-copy-id -i demo-key user1@<vm_ip_address>
+```</p>
 <details class="note" open="open">
 <summary>Note</summary>
-<p>Need to Press <strong>Done</strong> twice to confirm password for root user</p>
+<p>As a result of such command, the content of demo-key.pub file will to copied to remote VM in /home/user1/.ssh/authorized_keys</p>
 </details>
-<p>Step 12.5 Add user</p>
-<p>Click on <strong>User Creation</strong> and fill out the form</p>
-<div class="highlight"><pre><span></span><code>Full name: user1
-User name: user1
-Make this user administrator: yes
-Require apassword to use this account: yes
-Password: password1
-Confirm password: password1
-</code></pre></div>
-<p><img src="../img/par-17.png" /></p>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>Need to Press <strong>Done</strong> twice to confirm password for root user</p>
-</details>
-<p>Step 13. Start Linux installation</p>
-<p>Click on <strong>Begin instalation</strong></p>
-<p><img src="../img/par-18.png" /></p>
-<p>Wait until button <strong>Reboot System</strong> become active and Press it.</p>
-<p><img src="../img/par-19.png" /></p>
-<p>After that installation, VM will reboot and you will see *<em>terminal with login page</em></p>
-<details class="note" open="open">
-<summary>Note</summary>
-<p>Once installed you can find your VM file here <strong>/Users/<your user>/Parallels</strong>.</p>
-<p>*.pvm is Parallels file extensing which means that it is VM is created by Parallels Hypervisor.</p>
-</details>
-<p>Step 14. Login as user <strong>user1</strong></p>
-<p>Use password from steps above</p>
-<p><img src="../img/par-20.png" width=400 height=180 /></p>
-<p><img src="../img/par-21.png" width=400 height=180 /></p>
-<p>Step 15. Get ip address of your new VM</p>
-<p>Linux has command <strong>ip</strong> for getting information about ip addressess across all interfaces in Operation System.</p>
-<p>Some servers/Laptops have more that one interface(for example one for management, second for data transfer to another servers)</p>
-<p>Example:</p>
-<p><div class="highlight"><pre><span></span><code>ip a
-</code></pre></div>
-<strong>a</strong> is argument means address. Literaly we can use</p>
-<div class="highlight"><pre><span></span><code>ip address - to show list of available interfaces and their ip addresses
-</code></pre></div>
-<p><img src="../img/ssh-1.png" /></p>
-<p>Step 16. Write down IP address of your VM.</p>
+<p>Step 3. Try to connect to remote VM with using your private key</p>
+<p>Step 5. Log out from session:</p>
+<p>There are two options:</p>
+<ul>
+<li>Use Linux command <strong>exit</strong></li>
+<li>Use CTRL+D to close a ssh session</li>
+</ul>
+<p>Step 4. Try to get information about ip address of remote VM with using ssh as an one command.</p>
 
 
 
