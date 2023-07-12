@@ -410,33 +410,31 @@
 <h1 id="lab-for-using-ssh-tool">Lab for using SSH tool</h1>
 <p>In this lab we will try to remotely connect to own new created VM with linux from out local laptop/server</p>
 <p>Step 1. Create new ssh private/public key pair</p>
-<p><div class="highlight"><pre><span></span><code>Name for key: demo-key
-
-Outcome: check that your current directory contains two files:
+<div class="highlight"><pre><span></span><code>Name for key: demo-key
 </code></pre></div>
-ls -l </p>
-<p>demo-key
+<p>Outcome: check that your current directory contains two files:</p>
+<div class="highlight"><pre><span></span><code>ls -l 
+
+demo-key
 demo-key.pub
-<div class="highlight"><pre><span></span><code>Step 2. Add our public key to remote VM
-
-For remote VM we will use VM from [Lab for VM management in Parallels](https://kamelott.github.io/education/docs/Labs/parallels/)
-
-For key, file from Step 1 of **this Lab**
 </code></pre></div>
-ssh-copy-id -i demo-key user1@<vm_ip_address>
-```</p>
+<p>Step 2. Add our public key to remote VM</p>
+<p>For remote VM we will use VM from <a href="https://kamelott.github.io/education/docs/Labs/parallels/">Lab for VM management in Parallels</a></p>
+<p>For key, file from Step 1 of <strong>this Lab</strong></p>
+<div class="highlight"><pre><span></span><code>ssh-copy-id -i demo-key user1@&lt;vm_ip_address&gt;
+</code></pre></div>
 <details class="note" open="open">
 <summary>Note</summary>
 <p>As a result of such command, the content of demo-key.pub file will to copied to remote VM in /home/user1/.ssh/authorized_keys</p>
 </details>
-<p>Step 3. Try to connect to remote VM with using your private key</p>
+<p>Step 3. Connect to remote VM with using your private key <strong>demo-key</strong></p>
 <p>Step 5. Log out from session:</p>
 <p>There are two options:</p>
 <ul>
 <li>Use Linux command <strong>exit</strong></li>
 <li>Use CTRL+D to close a ssh session</li>
 </ul>
-<p>Step 4. Try to get information about ip address of remote VM with using ssh as an one command.</p>
+<p>Step 4. Get information about ip address of remote VM with using ssh as an one command.</p>
 
 
 
