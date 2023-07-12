@@ -366,6 +366,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#id-info-about-user" class="md-nav__link">
+    id - info about user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pwd-current-directory" class="md-nav__link">
+    pwd - current directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ls-list-of-files" class="md-nav__link">
     ls - list of files
   </a>
@@ -393,6 +407,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#yum-or-dnf-package-manager" class="md-nav__link">
+    yum or dnf - Package Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-local-package-manager" class="md-nav__link">
+    rpm - Local Package Manager
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -416,20 +444,6 @@
           <li class="md-nav__item">
   <a href="#ssh-remote-access" class="md-nav__link">
     ssh - remote access
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ssh-copy-id" class="md-nav__link">
-    ssh-copy-id
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ssh-keygen" class="md-nav__link">
-    ssh-keygen
   </a>
   
 </li>
@@ -568,6 +582,20 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#id-info-about-user" class="md-nav__link">
+    id - info about user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pwd-current-directory" class="md-nav__link">
+    pwd - current directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ls-list-of-files" class="md-nav__link">
     ls - list of files
   </a>
@@ -591,6 +619,20 @@
           <li class="md-nav__item">
   <a href="#ip-ip-address-info" class="md-nav__link">
     ip - ip address info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yum-or-dnf-package-manager" class="md-nav__link">
+    yum or dnf - Package Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-local-package-manager" class="md-nav__link">
+    rpm - Local Package Manager
   </a>
   
 </li>
@@ -622,20 +664,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#ssh-copy-id" class="md-nav__link">
-    ssh-copy-id
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ssh-keygen" class="md-nav__link">
-    ssh-keygen
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -658,15 +686,86 @@
 
 <h1 id="linux-commands">Linux commands</h1>
 <h2 id="internal-commands">Internal commands:</h2>
+<h3 id="id-info-about-user">id - info about user</h3>
+<h3 id="pwd-current-directory">pwd - current directory</h3>
 <h3 id="ls-list-of-files">ls - list of files</h3>
 <h3 id="rm-remove-files">rm - remove files</h3>
 <h3 id="cat-show-content-of-file">cat - show content of file</h3>
 <h3 id="ip-ip-address-info">ip - ip address info</h3>
+<h3 id="yum-or-dnf-package-manager">yum or dnf - Package Manager</h3>
+<p>Package Manager is a command which is responsible for Installation/Update/Deletion of Packages(software/programms) in Linux.</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code>yum &lt;action&gt; &lt;package&gt;
+</code></pre></div>
+<p>Where:</p>
+<p>action can be:
+- install
+- remove
+- upgrade</p>
+<p>Installation example for ssh package:</p>
+<div class="highlight"><pre><span></span><code>yum install openssh
+</code></pre></div>
+<p>Delete example for ssh package</p>
+<div class="highlight"><pre><span></span><code>yum remove openssh
+</code></pre></div>
+<h3 id="rpm-local-package-manager">rpm - Local Package Manager</h3>
+<p>rpm can also install/upgrade/delete packages but we need to specify such package like this</p>
+<p>Command above install package from file in Linux</p>
+<div class="highlight"><pre><span></span><code>rpm -i /home/user1/openssh.rpm
+</code></pre></div>
+<p>Main purpose of rpm tool is checking existing packages in a Linux</p>
+<p>Command shows list of installed packages in a Linux
+<div class="highlight"><pre><span></span><code>rpm -qa
+</code></pre></div></p>
 <h2 id="commands-with-come-from-installed-packages">Commands with come from installed packages:</h2>
 <h3 id="vi-terminal-editor">vi - terminal editor</h3>
 <h3 id="ssh-remote-access">ssh - remote access</h3>
-<h3 id="ssh-copy-id">ssh-copy-id</h3>
-<h3 id="ssh-keygen">ssh-keygen</h3>
+<p>Purpose: Remote access to server via IP or their DNS name</p>
+<p>Linux Package: openssh-clients</p>
+<p>Syntax:</p>
+<p><div class="highlight"><pre><span></span><code>ssh &lt;-i private_key&gt; &lt;user&gt;@&lt;server_ip&gt; &lt;command&gt;
+
+Examples:
+
+Connect to remote server(1.2.3.4) with user &quot;john&quot;  and password
+</code></pre></div>
+ssh john@1.2.3.4
+<div class="highlight"><pre><span></span><code>Connect to remote server(2.3.4.5) with user &quot;john&quot; and ssh key &quot;demo-key&quot;
+</code></pre></div>
+ssh -i demo-key john@2.3.4.5
+<div class="highlight"><pre><span></span><code>Connect to remote server(127.0.0.1) with user &quot;mike&quot; and run command &quot;ip a&quot; for getting ip address of remote server
+</code></pre></div>
+ssh mike@127.0.0.1 ip a
+<div class="highlight"><pre><span></span><code>### ssh-copy-id
+
+Purpose: Copy existing ssh public key to remote server for futher passwordless authentication
+
+Syntax:
+</code></pre></div>
+ssh-copy-id &lt;-i private_key&gt; <user>@<server_ip>
+<div class="highlight"><pre><span></span><code>When we copy our public part of ssh key to server we need to enter password from remote user.
+Once command is done on remote server your public ssh key will be added to .ssh folder in authorized_keys file
+
+
+Example:
+
+Copy ssh public key &quot;demo-key.pub&quot; to remote server(192.168.1.2) with using remote user &quot;admin&quot;
+</code></pre></div>
+ssh-copy-id -i demo-key admin@192.168.1.2
+<div class="highlight"><pre><span></span><code>### ssh-keygen
+
+Purpose: Generate new ssh key
+
+Syntax:
+</code></pre></div>
+ssh-keygen
+<div class="highlight"><pre><span></span><code>Such command is need to specify filename for new private key. Public key will be created in the same place with extention .pub
+
+For example is you specify filename &quot;demo-key&quot;, in your folder will be created two files:
+</code></pre></div>
+demo-key
+demo-key.pub
+```</p>
 
 
 
