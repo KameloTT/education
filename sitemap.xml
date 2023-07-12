@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kamelott.github.io/education/docs/Hints/linux/</loc>
+         <lastmod>2023-07-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kamelott.github.io/education/docs/Labs/editors/</loc>
          <lastmod>2023-07-12</lastmod>
          <changefreq>daily</changefreq>
