@@ -448,6 +448,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ssh-copy-id" class="md-nav__link">
+    ssh-copy-id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-keygen" class="md-nav__link">
+    ssh-keygen
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -664,6 +678,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ssh-copy-id" class="md-nav__link">
+    ssh-copy-id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-keygen" class="md-nav__link">
+    ssh-keygen
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -698,10 +726,12 @@
 <div class="highlight"><pre><span></span><code>yum &lt;action&gt; &lt;package&gt;
 </code></pre></div>
 <p>Where:</p>
-<p>action can be:
-- install
-- remove
-- upgrade</p>
+<p>action can be:</p>
+<ul>
+<li>install</li>
+<li>remove</li>
+<li>upgrade</li>
+</ul>
 <p>Installation example for ssh package:</p>
 <div class="highlight"><pre><span></span><code>yum install openssh
 </code></pre></div>
@@ -723,49 +753,39 @@
 <p>Purpose: Remote access to server via IP or their DNS name</p>
 <p>Linux Package: openssh-clients</p>
 <p>Syntax:</p>
-<p><div class="highlight"><pre><span></span><code>ssh &lt;-i private_key&gt; &lt;user&gt;@&lt;server_ip&gt; &lt;command&gt;
-
-Examples:
-
-Connect to remote server(1.2.3.4) with user &quot;john&quot;  and password
+<div class="highlight"><pre><span></span><code>ssh &lt;-i private_key&gt; &lt;user&gt;@&lt;server_ip&gt; &lt;command&gt;
 </code></pre></div>
-ssh john@1.2.3.4
-<div class="highlight"><pre><span></span><code>Connect to remote server(2.3.4.5) with user &quot;john&quot; and ssh key &quot;demo-key&quot;
+<p>Examples:</p>
+<p>Connect to remote server(1.2.3.4) with user "john"  and password</p>
+<div class="highlight"><pre><span></span><code>ssh john@1.2.3.4
 </code></pre></div>
-ssh -i demo-key john@2.3.4.5
-<div class="highlight"><pre><span></span><code>Connect to remote server(127.0.0.1) with user &quot;mike&quot; and run command &quot;ip a&quot; for getting ip address of remote server
+<p>Connect to remote server(2.3.4.5) with user "john" and ssh key "demo-key"</p>
+<div class="highlight"><pre><span></span><code>ssh -i demo-key john@2.3.4.5
 </code></pre></div>
-ssh mike@127.0.0.1 ip a
-<div class="highlight"><pre><span></span><code>### ssh-copy-id
-
-Purpose: Copy existing ssh public key to remote server for futher passwordless authentication
-
-Syntax:
+<p>Connect to remote server(127.0.0.1) with user "mike" and run command "ip a" for getting ip address of remote server</p>
+<div class="highlight"><pre><span></span><code>ssh mike@127.0.0.1 ip a
 </code></pre></div>
-ssh-copy-id &lt;-i private_key&gt; <user>@<server_ip>
-<div class="highlight"><pre><span></span><code>When we copy our public part of ssh key to server we need to enter password from remote user.
-Once command is done on remote server your public ssh key will be added to .ssh folder in authorized_keys file
-
-
-Example:
-
-Copy ssh public key &quot;demo-key.pub&quot; to remote server(192.168.1.2) with using remote user &quot;admin&quot;
+<h3 id="ssh-copy-id">ssh-copy-id</h3>
+<p>Purpose: Copy existing ssh public key to remote server for futher passwordless authentication</p>
+<p>Syntax:</p>
+<p><div class="highlight"><pre><span></span><code>ssh-copy-id &lt;-i private_key&gt; &lt;user&gt;@&lt;server_ip&gt;
 </code></pre></div>
-ssh-copy-id -i demo-key admin@192.168.1.2
-<div class="highlight"><pre><span></span><code>### ssh-keygen
-
-Purpose: Generate new ssh key
-
-Syntax:
+When we copy our public part of ssh key to server we need to enter password from remote user.
+Once command is done on remote server your public ssh key will be added to .ssh folder in authorized_keys file</p>
+<p>Example:</p>
+<p>Copy ssh public key "demo-key.pub" to remote server(192.168.1.2) with using remote user "admin"</p>
+<div class="highlight"><pre><span></span><code>ssh-copy-id -i demo-key admin@192.168.1.2
 </code></pre></div>
-ssh-keygen
-<div class="highlight"><pre><span></span><code>Such command is need to specify filename for new private key. Public key will be created in the same place with extention .pub
-
-For example is you specify filename &quot;demo-key&quot;, in your folder will be created two files:
+<h3 id="ssh-keygen">ssh-keygen</h3>
+<p>Purpose: Generate new ssh key</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code>ssh-keygen
 </code></pre></div>
-demo-key
+<p>Such command is need to specify filename for new private key. Public key will be created in the same place with extention .pub</p>
+<p>For example is you specify filename "demo-key", in your folder will be created two files:</p>
+<div class="highlight"><pre><span></span><code>demo-key
 demo-key.pub
-```</p>
+</code></pre></div>
 
 
 
