@@ -407,6 +407,75 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#rm-remove-files" class="md-nav__link">
+    rm - remove files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-ip-address-info" class="md-nav__link">
+    ip - ip address info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yum-or-dnf-package-manager" class="md-nav__link">
+    yum or dnf - Package Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-local-package-manager" class="md-nav__link">
+    rpm - Local Package Manager
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands-with-come-from-installed-packages" class="md-nav__link">
+    Commands with come from installed packages:
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands with come from installed packages:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-terminal-editor" class="md-nav__link">
+    vi - terminal editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-remote-access" class="md-nav__link">
+    ssh - remote access
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-copy-id" class="md-nav__link">
+    ssh-copy-id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-keygen" class="md-nav__link">
+    ssh-keygen
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -582,6 +651,75 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#rm-remove-files" class="md-nav__link">
+    rm - remove files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-ip-address-info" class="md-nav__link">
+    ip - ip address info
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yum-or-dnf-package-manager" class="md-nav__link">
+    yum or dnf - Package Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-local-package-manager" class="md-nav__link">
+    rpm - Local Package Manager
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands-with-come-from-installed-packages" class="md-nav__link">
+    Commands with come from installed packages:
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands with come from installed packages:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-terminal-editor" class="md-nav__link">
+    vi - terminal editor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-remote-access" class="md-nav__link">
+    ssh - remote access
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-copy-id" class="md-nav__link">
+    ssh-copy-id
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-keygen" class="md-nav__link">
+    ssh-keygen
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -721,198 +859,167 @@ $ pwd
 file1.txt  file2.txt
 </code></pre></div>
 <p>Sometimes directories in Linux contains hidden files. Their names started with dot(.). By defaut <strong>ls</strong> doesnt show them. use key <strong>-a</strong> to show them in output as well as other files/directories.</p>
-<p><div class="highlight"><pre><span></span><code>$ ls -a
+<div class="highlight"><pre><span></span><code>$ ls -a
 .  ..  .bash_history  .bash_logout  .bash_profile  .bashrc  file1.txt  file2.txt  .lesshst  .ssh  .viminfo
-
-**ls** very useful to define owner of files/directories and their permissions and last modification date
 </code></pre></div>
-$ ls -l
+<p><strong>ls</strong> very useful to define owner of files/directories and their permissions and last modification date</p>
+<div class="highlight"><pre><span></span><code>$ ls -l
 total 8
 -rw-r--r--. 1 user1 user1  9 Jul 12 17:21 file1.txt
 -rw-r--r--. 1 user1 user1 14 Jul 12 17:22 file2.txt
-<div class="highlight"><pre><span></span><code>???+ note
-
-     why do we see **total 8** in last output but command gave us only  2 files?
-
-
-
-### rm - remove files
-
-**rm** command helps to remove files or directories. rm means remove
-
-Syntax:
 </code></pre></div>
-rm <keys> <file or directory>
-<div class="highlight"><pre><span></span><code>Examples:
-
-Remove file
+<details class="note" open="open">
+<summary>Note</summary>
+<p>why do we see <strong>total 8</strong> in last output but command gave us only  2 files?</p>
+</details>
+<h3 id="rm-remove-files">rm - remove files</h3>
+<p><strong>rm</strong> command helps to remove files or directories. rm means remove</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code>rm &lt;keys&gt; &lt;file or directory&gt;
 </code></pre></div>
-$ rm file1.txt
-<div class="highlight"><pre><span></span><code>Remove file with option force(sometimes **rm** asks user to confirm remove operation, to avoid this use option **-f** that means force to delete file without asking
+<p>Examples:</p>
+<p>Remove file</p>
+<div class="highlight"><pre><span></span><code>$ rm file1.txt
 </code></pre></div>
-$ rm -f file1.txt
-<div class="highlight"><pre><span></span><code>Remove empty directory
+<p>Remove file with option force(sometimes <strong>rm</strong> asks user to confirm remove operation, to avoid this use option <strong>-f</strong> that means force to delete file without asking</p>
+<div class="highlight"><pre><span></span><code>$ rm -f file1.txt
 </code></pre></div>
-$ rm dir1
-<div class="highlight"><pre><span></span><code>Sometimes directory can contain some files or other directories. In that case we can use key **-r** that means recoursive to delete directory and all subdirectoties and files inside
+<p>Remove empty directory</p>
+<div class="highlight"><pre><span></span><code>$ rm dir1
 </code></pre></div>
-$ rm -f dir2
-<div class="highlight"><pre><span></span><code>### ip - ip address info
-
-**ip** command shows information about existing network interfaces and their IP addresses. Also with ip command we can set new IP on an interface
-
-???+ warning
-
-     using ip command for setting IP on interface is temporary change and it will be removed after OS reboot. For permanent changes need to use **nmcli** tool or directly change files in **/etc/sysconfig/network-scripts** or **/etc/NetworkManager/system-connections/**. It depends on version of Centos or RHEL OS.
-
-Syntax:
+<p>Sometimes directory can contain some files or other directories. In that case we can use key <strong>-r</strong> that means recoursive to delete directory and all subdirectoties and files inside</p>
+<div class="highlight"><pre><span></span><code>$ rm -f dir2
 </code></pre></div>
-ip <action>
-<div class="highlight"><pre><span></span><code>Where action can be:
-
-- address(or just a) - show info about ip addresses and interfaces
-- link - show info about only interfaces
-- monitor - monitor state of interfaces(links)
-- route - information about network routes
-
-Examples:
-
-Info about interfaces and their IP addresses
+<h3 id="ip-ip-address-info">ip - ip address info</h3>
+<p><strong>ip</strong> command shows information about existing network interfaces and their IP addresses. Also with ip command we can set new IP on an interface</p>
+<details class="warning" open="open">
+<summary>Warning</summary>
+<p>using ip command for setting IP on interface is temporary change and it will be removed after OS reboot. For permanent changes need to use <strong>nmcli</strong> tool or directly change files in <strong>/etc/sysconfig/network-scripts</strong> or <strong>/etc/NetworkManager/system-connections/</strong>. It depends on version of Centos or RHEL OS.</p>
+</details>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code>ip &lt;action&gt;
 </code></pre></div>
-$ ip a</p>
-<p>1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+<p>Where action can be:</p>
+<ul>
+<li>address(or just a) - show info about ip addresses and interfaces</li>
+<li>link - show info about only interfaces</li>
+<li>monitor - monitor state of interfaces(links)</li>
+<li>route - information about network routes</li>
+</ul>
+<p>Examples:</p>
+<p>Info about interfaces and their IP addresses</p>
+<div class="highlight"><pre><span></span><code>$ ip a
+
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
        valid_lft forever preferred_lft forever
     inet6 ::1/128 scope host 
        valid_lft forever preferred_lft forever
-2: enp0s5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+2: enp0s5: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc fq_codel state UP group default qlen 1000
     link/ether 00:1c:42:79:17:10 brd ff:ff:ff:ff:ff:ff
     inet 10.211.55.11/24 brd 10.211.55.255 scope global dynamic noprefixroute enp0s5
        valid_lft 1569sec preferred_lft 1569sec
     inet6 fdb2:2c26:f4e4:0:21c:42ff:fe79:1710/64 scope global dynamic noprefixroute 
        valid_lft 2591834sec preferred_lft 604634sec
     inet6 fe80::21c:42ff:fe79:1710/64 scope link noprefixroute 
-       valid_lft forever preferred_lft forever</p>
-<p><div class="highlight"><pre><span></span><code>Show info about network routes
+       valid_lft forever preferred_lft forever
 </code></pre></div>
-$ ip route
+<p>Show info about network routes</p>
+<div class="highlight"><pre><span></span><code>$ ip route
 default via 10.211.55.1 dev enp0s5 proto dhcp src 10.211.55.11 metric 100 
 10.211.55.0/24 dev enp0s5 proto kernel scope link src 10.211.55.11 metric 100 
-<div class="highlight"><pre><span></span><code>### yum or dnf - Package Manager
-
-Package Manager is a command which is responsible for Installation/Update/Deletion of Packages(software/programms) in Linux.
-
-Syntax:
 </code></pre></div>
-yum <action> <package>
-<div class="highlight"><pre><span></span><code>Where:
-
-action can be:
-
-- install
-- remove
-- upgrade
-
-Installation example for ssh package:
+<h3 id="yum-or-dnf-package-manager">yum or dnf - Package Manager</h3>
+<p>Package Manager is a command which is responsible for Installation/Update/Deletion of Packages(software/programms) in Linux.</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code>yum &lt;action&gt; &lt;package&gt;
 </code></pre></div>
-yum install openssh
-<div class="highlight"><pre><span></span><code>Delete example for ssh package
+<p>Where:</p>
+<p>action can be:</p>
+<ul>
+<li>install</li>
+<li>remove</li>
+<li>upgrade</li>
+</ul>
+<p>Installation example for ssh package:</p>
+<div class="highlight"><pre><span></span><code>yum install openssh
 </code></pre></div>
-yum remove openssh
-<div class="highlight"><pre><span></span><code>### rpm - Local Package Manager
-
-rpm can also install/upgrade/delete packages but we need to specify such package like this
-
-Command above install package from file in Linux
+<p>Delete example for ssh package</p>
+<div class="highlight"><pre><span></span><code>yum remove openssh
 </code></pre></div>
-rpm -i /home/user1/openssh.rpm
-<div class="highlight"><pre><span></span><code>Main purpose of rpm tool is checking existing packages in a Linux
-
-Command shows list of installed packages in a Linux
+<h3 id="rpm-local-package-manager">rpm - Local Package Manager</h3>
+<p>rpm can also install/upgrade/delete packages but we need to specify such package like this</p>
+<p>Command above install package from file in Linux</p>
+<div class="highlight"><pre><span></span><code>rpm -i /home/user1/openssh.rpm
 </code></pre></div>
-rpm -qa
-<div class="highlight"><pre><span></span><code>Also with rpm we can find which package contains file in Linux
+<p>Main purpose of rpm tool is checking existing packages in a Linux</p>
+<p>Command shows list of installed packages in a Linux
+<div class="highlight"><pre><span></span><code>rpm -qa
+</code></pre></div></p>
+<p>Also with rpm we can find which package contains file in Linux</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Not all files in Linux belongs to rpm packages, but most of them belong</p>
+</details>
+<p>Below commands get full path to command <strong>vi</strong> and find package for file '/usr/bin/vi' </p>
+<div class="highlight"><pre><span></span><code>$ which vi
+/usr/bin/vi
 
-???+ note
-
-     Not all files in Linux belongs to rpm packages, but most of them belong
-
-Below commands get full path to command **vi** and find package for file &#39;/usr/bin/vi&#39; 
-</code></pre></div>
-$ which vi
-/usr/bin/vi</p>
-<p>$ rpm -qf /usr/bin/vi
+$ rpm -qf /usr/bin/vi
 vim-minimal-8.2.2637-20.el9.x86_64
-<div class="highlight"><pre><span></span><code>## Commands with come from installed packages:
-
-### vi - terminal editor
-
-Purpose: Terminal editor, allows to create,modify files
-
-Linux Package: vim-minimal
-
-Syntax:
 </code></pre></div>
-vi <file>
-<div class="highlight"><pre><span></span><code>Example:
+<h2 id="commands-with-come-from-installed-packages">Commands with come from installed packages:</h2>
+<h3 id="vi-terminal-editor">vi - terminal editor</h3>
+<p>Purpose: Terminal editor, allows to create,modify files</p>
+<p>Linux Package: vim-minimal</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code>vi &lt;file&gt;
 </code></pre></div>
-vi file1.txt</p>
-<p>vi /home/user1/file1.txt
-<div class="highlight"><pre><span></span><code>### ssh - remote access
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>vi file1.txt
 
-Purpose: Remote access to server via IP or their DNS name
-
-Linux Package: openssh-clients
-
-Syntax:
+vi /home/user1/file1.txt
 </code></pre></div>
-ssh &lt;-i private_key&gt; <user>@<server_ip> <command>
-<div class="highlight"><pre><span></span><code>Examples:
-
-Connect to remote server(1.2.3.4) with user &quot;john&quot;  and password
+<h3 id="ssh-remote-access">ssh - remote access</h3>
+<p>Purpose: Remote access to server via IP or their DNS name</p>
+<p>Linux Package: openssh-clients</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code>ssh &lt;-i private_key&gt; &lt;user&gt;@&lt;server_ip&gt; &lt;command&gt;
 </code></pre></div>
-ssh john@1.2.3.4
-<div class="highlight"><pre><span></span><code>Connect to remote server(2.3.4.5) with user &quot;john&quot; and ssh key &quot;demo-key&quot;
+<p>Examples:</p>
+<p>Connect to remote server(1.2.3.4) with user "john"  and password</p>
+<div class="highlight"><pre><span></span><code>ssh john@1.2.3.4
 </code></pre></div>
-ssh -i demo-key john@2.3.4.5
-<div class="highlight"><pre><span></span><code>Connect to remote server(127.0.0.1) with user &quot;mike&quot; and run command &quot;ip a&quot; for getting ip address of remote server
+<p>Connect to remote server(2.3.4.5) with user "john" and ssh key "demo-key"</p>
+<div class="highlight"><pre><span></span><code>ssh -i demo-key john@2.3.4.5
 </code></pre></div>
-ssh mike@127.0.0.1 ip a
-<div class="highlight"><pre><span></span><code>### ssh-copy-id
-
-Purpose: Copy existing ssh public key to remote server for futher passwordless authentication
-
-Linux Package: openssh-clients
-
-Syntax:
+<p>Connect to remote server(127.0.0.1) with user "mike" and run command "ip a" for getting ip address of remote server</p>
+<div class="highlight"><pre><span></span><code>ssh mike@127.0.0.1 ip a
 </code></pre></div>
-ssh-copy-id &lt;-i private_key&gt; <user>@<server_ip>
-<div class="highlight"><pre><span></span><code>When we copy our public part of ssh key to server we need to enter password from remote user.
-Once command is done on remote server your public ssh key will be added to .ssh folder in authorized_keys file
-
-
-Example:
-
-Copy ssh public key &quot;demo-key.pub&quot; to remote server(192.168.1.2) with using remote user &quot;admin&quot;
+<h3 id="ssh-copy-id">ssh-copy-id</h3>
+<p>Purpose: Copy existing ssh public key to remote server for futher passwordless authentication</p>
+<p>Linux Package: openssh-clients</p>
+<p>Syntax:</p>
+<p><div class="highlight"><pre><span></span><code>ssh-copy-id &lt;-i private_key&gt; &lt;user&gt;@&lt;server_ip&gt;
 </code></pre></div>
-ssh-copy-id -i demo-key admin@192.168.1.2
-<div class="highlight"><pre><span></span><code>### ssh-keygen
-
-Purpose: Generate new ssh key
-
-Linux Package: openssh-clients
-
-Syntax:
+When we copy our public part of ssh key to server we need to enter password from remote user.
+Once command is done on remote server your public ssh key will be added to .ssh folder in authorized_keys file</p>
+<p>Example:</p>
+<p>Copy ssh public key "demo-key.pub" to remote server(192.168.1.2) with using remote user "admin"</p>
+<div class="highlight"><pre><span></span><code>ssh-copy-id -i demo-key admin@192.168.1.2
 </code></pre></div>
-ssh-keygen
-<div class="highlight"><pre><span></span><code>Such command is need to specify filename for new private key. Public key will be created in the same place with extention .pub
-
-For example is you specify filename &quot;demo-key&quot;, in your folder will be created two files:
+<h3 id="ssh-keygen">ssh-keygen</h3>
+<p>Purpose: Generate new ssh key</p>
+<p>Linux Package: openssh-clients</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code>ssh-keygen
 </code></pre></div>
-demo-key
+<p>Such command is need to specify filename for new private key. Public key will be created in the same place with extention .pub</p>
+<p>For example is you specify filename "demo-key", in your folder will be created two files:</p>
+<div class="highlight"><pre><span></span><code>demo-key
 demo-key.pub
-```</p>
+</code></pre></div>
 
 
 
