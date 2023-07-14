@@ -366,6 +366,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#cat-show-content-of-file" class="md-nav__link">
+    cat - show content of file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#echo-print-message-on-terminal-screen" class="md-nav__link">
     echo - print message on terminal screen
   </a>
@@ -534,6 +541,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#cat-show-content-of-file" class="md-nav__link">
+    cat - show content of file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#echo-print-message-on-terminal-screen" class="md-nav__link">
     echo - print message on terminal screen
   </a>
@@ -590,9 +604,76 @@
 
 <h1 id="linux-commands">Linux commands</h1>
 <h2 id="internal-commands">Internal commands:</h2>
+<h3 id="cat-show-content-of-file">cat - show content of file</h3>
+<p><strong>cat</strong> command  usually is used for reading content of text files. Sometimes can be used for combine content of two files</p>
+<p>Syntax</p>
+<div class="highlight"><pre><span></span><code>cat &lt;file&gt;
+</code></pre></div>
+<p>Exampes:</p>
+<p>Read the file</p>
+<div class="highlight"><pre><span></span><code>$ cat file1.txt
+Hi there
+</code></pre></div>
+<p>Combine content of two files</p>
+<div class="highlight"><pre><span></span><code>$ cat file1.txt
+Hi there
+$ cat file2.txt
+This is admin
+$ cat file1.txt file2.txt
+Hi there
+This is admin
+</code></pre></div>
 <h3 id="echo-print-message-on-terminal-screen">echo - print message on terminal screen</h3>
+<p><strong>echo</strong> Very usefull command which allows to print messages to terminal.</p>
+<p>Usually used for writing something from terminal to file</p>
+<p>Syntax</p>
+<div class="highlight"><pre><span></span><code>echo &#39;text&#39;
+</code></pre></div>
+<p>Examples:</p>
+<p>Show message "Hello World" to terminal</p>
+<div class="highlight"><pre><span></span><code>$ echo &#39;Hello World&#39;
+Hello World
+</code></pre></div>
+<p>Message "Hello World" add to new file or rewrite existing content</p>
+<div class="highlight"><pre><span></span><code>$ echo &#39;Hello World&#39; &gt; file3.txt
+$ cat file3.txt 
+Hello World
+</code></pre></div>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Symbol <strong>&gt;</strong> in terminal means redirect output from command to file
+ Symbol <strong>&gt;&gt;</strong> in terminal means to add output from command to end of file</p>
+</details>
+<p>Add text 'From admin' to existing file file3.txt</p>
+<div class="highlight"><pre><span></span><code>$ echo &#39;From admin&#39; &gt;&gt; file3.txt 
+$ cat file3.txt 
+Hello World
+From admin
+</code></pre></div>
 <h3 id="id-info-about-user">id - info about user</h3>
+<p><strong>id</strong> command is used for getting info about users and their belonging to Linux groups</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code>id &lt;user&gt;
+</code></pre></div>
+<p>Examples:</p>
+<p>Show info about current user</p>
+<div class="highlight"><pre><span></span><code>$ id
+uid=1000(user1) gid=1000(user1) groups=1000(user1),10(wheel) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+</code></pre></div>
+<p>Show info about root user</p>
+<div class="highlight"><pre><span></span><code>$ id root
+uid=0(root) gid=0(root) groups=0(root)
+</code></pre></div>
 <h3 id="pwd-current-directory">pwd - current directory</h3>
+<p><strong>pwd</strong> command show path to current directory. pwd - Print name of Working Directory</p>
+<p>Syntax:</p>
+<div class="highlight"><pre><span></span><code>pwd
+</code></pre></div>
+<p>Example</p>
+<p>Show current directory in terminal</p>
+<div class="highlight"><pre><span></span><code>$ pwd
+/home/user1
+</code></pre></div>
 <h3 id="cd-change-current-directory">cd - change current directory</h3>
 <p><strong>cd</strong> is short version of <strong>Change Directory</strong>. Used for jump between directories in Linux.</p>
 <p>Of course we can always use paths to files but sometime easy to jump to a directory and use relative path, not absolute</p>
@@ -676,28 +757,6 @@ $ rm dir1
 <div class="highlight"><pre><span></span><code>Sometimes directory can contain some files or other directories. In that case we can use key **-r** that means recoursive to delete directory and all subdirectoties and files inside
 </code></pre></div>
 $ rm -f dir2
-<div class="highlight"><pre><span></span><code>### cat - show content of file
-
-**cat** command  usually is used for reading content of text files. Sometimes can be used for combine content of two files
-
-Syntax
-</code></pre></div>
-cat <file>
-<div class="highlight"><pre><span></span><code>Exampes:
-
-Read the file
-</code></pre></div>
-$ cat file1.txt 
-Hi there
-<div class="highlight"><pre><span></span><code>Combine content of two files
-</code></pre></div>
-$ cat file1.txt 
-Hi there
-$ cat file2.txt 
-This is admin
-$ cat file1.txt file2.txt
-Hi there
-This is admin
 <div class="highlight"><pre><span></span><code>### ip - ip address info
 
 **ip** command shows information about existing network interfaces and their IP addresses. Also with ip command we can set new IP on an interface
