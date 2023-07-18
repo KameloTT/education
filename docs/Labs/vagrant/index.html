@@ -709,8 +709,8 @@ conf.vm.network &quot;private_network&quot;, ip: &quot;192.168.0.11&quot;
 <p>Line <strong>conf.vm.hostname = 'server1.example.com'</strong> means that we define name of server in Linux. When you login to your new VM which is created by Vagrant you will see name of server is <strong>server1.example.com</strong> instead of default <strong>localhost</strong></p>
 <h2 id="step-6-lets-create-again-vm-with-custom-hostname-and-ip-address">Step 6. Lets create again VM with custom hostname and ip address</h2>
 <div class="highlight"><pre><span></span><code>$ vagrant up server1
-$ vagrant ssh server1 hostname
-$ vagrant ssh server1 ip a
+$ vagrant ssh server1 -c &#39;hostname&#39;
+$ vagrant ssh server1 -c &#39;ip a&#39;
 </code></pre></div>
 <h2 id="step-7-remove-vm-via-vagrant">Step 7. Remove VM via Vagrant</h2>
 <h2 id="step-8-try-to-create-three-vm-with-following-parameters">Step 8*. Try to create three VM with following parameters:</h2>

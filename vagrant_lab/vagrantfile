@@ -1,0 +1,16 @@
+Vagrant.configure(2) do |config|
+
+  config.vm.define "server1" do |conf|
+conf.vm.hostname = 'server1.example.com'
+conf.vm.network "private_network", ip: "192.168.0.11"    
+conf.vm.synced_folder ".", "/vagrant", disabled: true
+    conf.vm.box = "generic/centos9s"
+    conf.vm.provider "parallels" do |v|
+      v.memory = 2048
+      v.cpus = 1
+      v.name = 'server1'
+      v.customize ["set", :id, "--hypervisor-type", "apple"]
+    end
+  end
+end
+
