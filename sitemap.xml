@@ -2,47 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kamelott.github.io/education/docs/about/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kamelott.github.io/education/docs/plan/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kamelott.github.io/education/docs/Base/ssh/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kamelott.github.io/education/docs/Base/terminals/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kamelott.github.io/education/docs/Base/vagrant/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kamelott.github.io/education/docs/Hints/linux/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kamelott.github.io/education/docs/Labs/editors/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kamelott.github.io/education/docs/Labs/parallels/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kamelott.github.io/education/docs/Labs/ssh/</loc>
-         <lastmod>2023-07-14</lastmod>
+         <lastmod>2023-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kamelott.github.io/education/docs/Labs/vagrant/</loc>
+         <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
