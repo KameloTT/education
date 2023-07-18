@@ -635,7 +635,7 @@
 <h2 id="step-1-create-vagrant-configuration-file">Step 1. Create Vagrant Configuration file</h2>
 <p>Vagrant looks for configuration(aka instruction) in a folder which we run <strong>vagrant</strong> command.</p>
 <p>Lets create a new directory</p>
-<div class="highlight"><pre><span></span><code>mkdir vagrant_lab
+<div class="highlight"><pre><span></span><code>$ mkdir vagrant_lab
 </code></pre></div>
 <p>Now we need to go to new created directory and create configuration file for Vagrant</p>
 <div class="highlight"><pre><span></span><code>$ cd vagrant_lab
@@ -699,7 +699,7 @@ $ vagrant ssh server1 ip a
 <div class="highlight"><pre><span></span><code>$ vagrant destroy server1
 </code></pre></div>
 <h2 id="step-5-customization-of-vm-provisioning">Step 5. Customization of VM provisioning</h2>
-<p>As you could see previous VM doesnt have any hostname and IP was unpredictable(randomly choosen).</p>
+<p>As you could see previous VM doesnt have any hostname and IP was unpredictable(randomly chosen).</p>
 <p>There are many cases when we need to explisitly specify IP address and hostname for new create VM.</p>
 <p>Lets do it</p>
 <p>Open Vargantfile and add following lines under <strong>config.vm.define "server1" do |conf|</strong> section</p>
